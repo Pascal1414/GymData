@@ -23,48 +23,84 @@
             document.getElementById("Trizeps").value = getCookie("Trizeps");
         }
 
+        function deleteData() {
+            document.getElementById("Beinpresse").value = "";
+            document.getElementById("Beinbeuger").value = "";
+            document.getElementById("Waden").value = "";
+            document.getElementById("Rückenstrecker").value = "";
+            document.getElementById("Rudern").value = "";
+            document.getElementById("Latzug").value = "";
+            document.getElementById("Brust_KH").value = "";
+            document.getElementById("Brustpresse").value = "";
+            document.getElementById("Schulterpresse").value = "";
+            document.getElementById("Bizeps").value = "";
+            document.getElementById("Trizeps").value = "";
+
+            Beinpresse_change();
+            Beinbeuger_change();
+            Waden_change();
+            Rückenstrecker_change();
+            Rudern_change();
+            Latzug_change();
+            Brust_KH_change();
+            Brustpresse_change();
+            Schulterpresse_change();
+            Bizeps_change();
+            Trizeps_change();
+        }
+
+        function getexpiresdate(exdays) {
+
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            return "expires=" + d.toUTCString();
+        }
+
         function Beinpresse_change() {
-            document.cookie = "Beinpresse=" + document.getElementById("Beinpresse").value;
+            const d = new Date();
+            d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = "Beinpresse=" + document.getElementById("Beinpresse").value + ";" + getexpiresdate(7);
         }
 
         function Beinbeuger_change() {
-            document.cookie = "Beinbeuger=" + document.getElementById("Beinbeuger").value;
+            document.cookie = "Beinbeuger=" + document.getElementById("Beinbeuger").value + ";" + getexpiresdate(7);
         }
 
         function Waden_change() {
-            document.cookie = "Waden=" + document.getElementById("Waden").value;
+            document.cookie = "Waden=" + document.getElementById("Waden").value + ";" + getexpiresdate(7);
         }
 
         function Rückenstrecker_change() {
-            document.cookie = "Rueckenstrecker=" + document.getElementById("Rückenstrecker").value;
+            document.cookie = "Rueckenstrecker=" + document.getElementById("Rückenstrecker").value + ";" + getexpiresdate(7);
         }
 
         function Rudern_change() {
-            document.cookie = "Rudern=" + document.getElementById("Rudern").value;
+            document.cookie = "Rudern=" + document.getElementById("Rudern").value + ";" + getexpiresdate(7);
         }
 
         function Latzug_change() {
-            document.cookie = "Latzug=" + document.getElementById("Latzug").value;
+            document.cookie = "Latzug=" + document.getElementById("Latzug").value + ";" + getexpiresdate(7);
         }
 
         function Brust_KH_change() {
-            document.cookie = "Brust_KH=" + document.getElementById("Brust_KH").value;
+            document.cookie = "Brust_KH=" + document.getElementById("Brust_KH").value + ";" + getexpiresdate(7);
         }
 
         function Brustpresse_change() {
-            document.cookie = "Brustpresse=" + document.getElementById("Brustpresse").value;
+            document.cookie = "Brustpresse=" + document.getElementById("Brustpresse").value + ";" + getexpiresdate(7);
         }
 
         function Schulterpresse_change() {
-            document.cookie = "Schulterpresse=" + document.getElementById("Schulterpresse").value;
+            document.cookie = "Schulterpresse=" + document.getElementById("Schulterpresse").value + ";" + getexpiresdate(7);
         }
 
         function Bizeps_change() {
-            document.cookie = "Bizeps=" + document.getElementById("Bizeps").value;
+            document.cookie = "Bizeps=" + document.getElementById("Bizeps").value + ";" + getexpiresdate(7);
         }
 
         function Trizeps_change() {
-            document.cookie = "Trizeps=" + document.getElementById("Trizeps").value;
+            document.cookie = "Trizeps=" + document.getElementById("Trizeps").value + ";" + getexpiresdate(7);
         }
 
         function getCookie(cname) {
@@ -93,68 +129,75 @@
 <body>
 
     <div class="m-3">
+        <div>
+            <h3>Gym Data</h3>
+        </div>
+        <div>
+            <div>
+                <p>Beinpresse</p>
+                <input id="Beinpresse" onchange="Beinpresse_change()">
+            </div>
+            <br>
 
-        <div>
-            <p>Beinpresse</p>
-            <input id="Beinpresse" onchange="Beinpresse_change()">
-        </div>
-        <br>
+            <div class="bg-light">
+                <p>Beinbeuger</p>
+                <input id="Beinbeuger" onchange="Beinbeuger_change()">
+            </div>
+            <br>
+            <div>
+                <p>Waden</p>
+                <input id="Waden" onchange="Waden_change()">
+            </div>
+            <br>
+            <div class="bg-light">
+                <p>Rückenstrecker</p>
+                <input id="Rückenstrecker" onchange="Rückenstrecker_change()">
+            </div>
+            <br>
+            <div>
+                <p>Rudern</p>
+                <input id="Rudern" onchange="Rudern_change()">
+            </div>
+            <br>
+            <div class="bg-light">
+                <p>Latzug</p>
+                <input id="Latzug" onchange="Latzug_change()">
+            </div>
+            <br>
+            <div>
+                <p>Brust KH</p>
+                <input id="Brust_KH" onchange="Brust_KH_change()">
+            </div>
+            <br>
+            <div class="bg-light">
+                <p>Brustpresse</p>
+                <input id="Brustpresse" onchange="Brustpresse_change()">
+            </div>
+            <br>
+            <div>
+                <p>Schulterpresse</p>
+                <input id="Schulterpresse" onchange="Schulterpresse_change()">
+            </div>
+            <br>
+            <div class="bg-light">
+                <p>Bizeps</p>
+                <input id="Bizeps" onchange="Bizeps_change()">
+            </div>
+            <br>
+            <div>
+                <p>Trizeps</p>
+                <input id="Trizeps" onchange="Trizeps_change()">
+            </div>
+            <br>
+            <div>
+                <button class="btn btn-primary" onclick="loadData()">Load Data</button>
 
-        <div class="bg-light">
-            <p>Beinbeuger</p>
-            <input id="Beinbeuger" onchange="Beinbeuger_change()">
-        </div>
-        <br>
-        <div>
-            <p>Waden</p>
-            <input id="Waden" onchange="Waden_change()">
-        </div>
-        <br>
-        <div class="bg-light">
-            <p>Rückenstrecker</p>
-            <input id="Rückenstrecker" onchange="Rückenstrecker_change()">
-        </div>
-        <br>
-        <div>
-            <p>Rudern</p>
-            <input id="Rudern" onchange="Rudern_change()">
-        </div>
-        <br>
-        <div class="bg-light">
-            <p>Latzug</p>
-            <input id="Latzug" onchange="Latzug_change()">
-        </div>
-        <br>
-        <div>
-            <p>Brust KH</p>
-            <input id="Brust_KH" onchange="Brust_KH_change()">
-        </div>
-        <br>
-        <div class="bg-light">
-            <p>Brustpresse</p>
-            <input id="Brustpresse" onchange="Brustpresse_change()">
-        </div>
-        <br>
-        <div>
-            <p>Schulterpresse</p>
-            <input id="Schulterpresse" onchange="Schulterpresse_change()">
-        </div>
-        <br>
-        <div class="bg-light">
-            <p>Bizeps</p>
-            <input id="Bizeps" onchange="Bizeps_change()">
-        </div>
-        <br>
-        <div>
-            <p>Trizeps</p>
-            <input id="Trizeps" onchange="Trizeps_change()">
-        </div>
-        <br>
-        <div>
-            <button class="btn btn-primary" onclick="loadData()">Load Data</button>
-        </div>
+                <br> <br> <br>
 
+                <button class="btn btn-primary" onclick="deleteData()">Delete Data</button>
+            </div>
 
+        </div>
     </div>
 
 
