@@ -24,29 +24,32 @@
         }
 
         function deleteData() {
-            document.getElementById("Beinpresse").value = "";
-            document.getElementById("Beinbeuger").value = "";
-            document.getElementById("Waden").value = "";
-            document.getElementById("Rückenstrecker").value = "";
-            document.getElementById("Rudern").value = "";
-            document.getElementById("Latzug").value = "";
-            document.getElementById("Brust_KH").value = "";
-            document.getElementById("Brustpresse").value = "";
-            document.getElementById("Schulterpresse").value = "";
-            document.getElementById("Bizeps").value = "";
-            document.getElementById("Trizeps").value = "";
+            Check = confirm("Möchten Sie die Daten wirklich löschen?");
+            if (Check == true) {
+                document.getElementById("Beinpresse").value = "";
+                document.getElementById("Beinbeuger").value = "";
+                document.getElementById("Waden").value = "";
+                document.getElementById("Rückenstrecker").value = "";
+                document.getElementById("Rudern").value = "";
+                document.getElementById("Latzug").value = "";
+                document.getElementById("Brust_KH").value = "";
+                document.getElementById("Brustpresse").value = "";
+                document.getElementById("Schulterpresse").value = "";
+                document.getElementById("Bizeps").value = "";
+                document.getElementById("Trizeps").value = "";
 
-            Beinpresse_change();
-            Beinbeuger_change();
-            Waden_change();
-            Rückenstrecker_change();
-            Rudern_change();
-            Latzug_change();
-            Brust_KH_change();
-            Brustpresse_change();
-            Schulterpresse_change();
-            Bizeps_change();
-            Trizeps_change();
+                Beinpresse_change();
+                Beinbeuger_change();
+                Waden_change();
+                Rückenstrecker_change();
+                Rudern_change();
+                Latzug_change();
+                Brust_KH_change();
+                Brustpresse_change();
+                Schulterpresse_change();
+                Bizeps_change();
+                Trizeps_change();
+            }
         }
 
         function getexpiresdate(exdays) {
