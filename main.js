@@ -1,5 +1,7 @@
 window.onfocus = function() {
-    console.log("QWE");
+    loadData();
+};
+window.onload = function() {
     loadData();
 };
 
