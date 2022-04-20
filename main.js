@@ -99,6 +99,7 @@ function Bizeps_change() {
 }
 
 function Trizeps_change() {
+
     document.cookie = "Trizeps=" + document.getElementById("Trizeps").value + ";" + getexpiresdate(7);
 }
 
