@@ -33,58 +33,69 @@ function loadDataOnLoad() {
     document.getElementById("Trizeps").value = getCookie("Trizeps");
 
     let string1 = getCookie("1");
-    document.getElementById("Empty1").value = string1.split(",")[0];
-    document.getElementById("Empty2").value = string1.split(",")[1];
-    document.getElementById("Empty1").style.background = backgroundSuccess;
-    document.getElementById("Empty2").style.background = backgroundSuccess;
-
+    if (string1 != "") {
+        document.getElementById("Empty1").value = string1.split(",")[0];
+        document.getElementById("Empty2").value = string1.split(",")[1];
+        document.getElementById("Empty1").style.background = backgroundSuccess;
+        document.getElementById("Empty2").style.background = backgroundSuccess;
+    }
     let string2 = getCookie("2");
-    document.getElementById("Empty3").value = string2.split(",")[0];
-    document.getElementById("Empty4").value = string2.split(",")[1];
-    document.getElementById("Empty3").style.background = backgroundSuccess;
-    document.getElementById("Empty4").style.background = backgroundSuccess;
-
+    if (string2 != "") {
+        document.getElementById("Empty3").value = string2.split(",")[0];
+        document.getElementById("Empty4").value = string2.split(",")[1];
+        document.getElementById("Empty3").style.background = backgroundSuccess;
+        document.getElementById("Empty4").style.background = backgroundSuccess;
+    }
     let string3 = getCookie("3");
-    document.getElementById("Empty5").value = string3.split(",")[0];
-    document.getElementById("Empty6").value = string3.split(",")[1];
-    document.getElementById("Empty5").style.background = backgroundSuccess;
-    document.getElementById("Empty6").style.background = backgroundSuccess;
-
+    if (string3 != "") {
+        document.getElementById("Empty5").value = string3.split(",")[0];
+        document.getElementById("Empty6").value = string3.split(",")[1];
+        document.getElementById("Empty5").style.background = backgroundSuccess;
+        document.getElementById("Empty6").style.background = backgroundSuccess;
+    }
     let string4 = getCookie("4");
-    document.getElementById("Empty7").value = string4.split(",")[0];
-    document.getElementById("Empty8").value = string4.split(",")[1];
-    document.getElementById("Empty7").style.background = backgroundSuccess;
-    document.getElementById("Empty8").style.background = backgroundSuccess;
-
+    if (string4 != "") {
+        document.getElementById("Empty7").value = string4.split(",")[0];
+        document.getElementById("Empty8").value = string4.split(",")[1];
+        document.getElementById("Empty7").style.background = backgroundSuccess;
+        document.getElementById("Empty8").style.background = backgroundSuccess;
+    }
     let string5 = getCookie("5");
-    document.getElementById("Empty9").value = string5.split(",")[0];
-    document.getElementById("Empty10").value = string5.split(",")[1];
-    document.getElementById("Empty9").style.background = backgroundSuccess;
-    document.getElementById("Empty10").style.background = backgroundSuccess;
-
+    if (string5 != "") {
+        document.getElementById("Empty9").value = string5.split(",")[0];
+        document.getElementById("Empty10").value = string5.split(",")[1];
+        document.getElementById("Empty9").style.background = backgroundSuccess;
+        document.getElementById("Empty10").style.background = backgroundSuccess;
+    }
     let string6 = getCookie("6");
-    document.getElementById("Empty11").value = string6.split(",")[0];
-    document.getElementById("Empty12").value = string6.split(",")[1];
-    document.getElementById("Empty11").style.background = backgroundSuccess;
-    document.getElementById("Empty12").style.background = backgroundSuccess;
-
+    if (string6 != "") {
+        document.getElementById("Empty11").value = string6.split(",")[0];
+        document.getElementById("Empty12").value = string6.split(",")[1];
+        document.getElementById("Empty11").style.background = backgroundSuccess;
+        document.getElementById("Empty12").style.background = backgroundSuccess;
+    }
     let string7 = getCookie("7");
-    document.getElementById("Empty13").value = string7.split(",")[0];
-    document.getElementById("Empty14").value = string7.split(",")[1];
-    document.getElementById("Empty13").style.background = backgroundSuccess;
-    document.getElementById("Empty14").style.background = backgroundSuccess;
-
+    if (string7 != "") {
+        document.getElementById("Empty13").value = string7.split(",")[0];
+        document.getElementById("Empty14").value = string7.split(",")[1];
+        document.getElementById("Empty13").style.background = backgroundSuccess;
+        document.getElementById("Empty14").style.background = backgroundSuccess;
+    }
     let string8 = getCookie("8");
-    document.getElementById("Empty15").value = string8.split(",")[0];
-    document.getElementById("Empty16").value = string8.split(",")[1];
-    document.getElementById("Empty15").style.background = backgroundSuccess;
-    document.getElementById("Empty16").style.background = backgroundSuccess;
+    if (string8 != "") {
+        document.getElementById("Empty15").value = string8.split(",")[0];
+        document.getElementById("Empty16").value = string8.split(",")[1];
+        document.getElementById("Empty15").style.background = backgroundSuccess;
+        document.getElementById("Empty16").style.background = backgroundSuccess;
+    }
 
     let string9 = getCookie("9");
-    document.getElementById("Empty17").value = string9.split(",")[0];
-    document.getElementById("Empty18").value = string9.split(",")[1];
-    document.getElementById("Empty17").style.background = backgroundSuccess;
-    document.getElementById("Empty18").style.background = backgroundSuccess;
+    if (string9 != "") {
+        document.getElementById("Empty17").value = string9.split(",")[0];
+        document.getElementById("Empty18").value = string9.split(",")[1];
+        document.getElementById("Empty17").style.background = backgroundSuccess;
+        document.getElementById("Empty18").style.background = backgroundSuccess;
+    }
 }
 
 function deleteData() {
@@ -294,7 +305,7 @@ function Empty4_change() {
 }
 
 function Empty5_change() {
-    document.getElementById("Empty8").style.background = "";
+    document.getElementById("Empty9").style.background = "";
     document.getElementById("Empty10").style.background = "";
 }
 
@@ -316,4 +327,57 @@ function Empty8_change() {
 function Empty9_change() {
     document.getElementById("Empty17").style.background = "";
     document.getElementById("Empty18").style.background = "";
+}
+
+function deleteDataTable() {
+    Check = confirm("Möchten Sie die Daten wirklich löschen?");
+    if (Check == true) {
+        document.cookie = "1" + "=";
+        document.cookie = "2" + "=";
+        document.cookie = "3" + "=";
+        document.cookie = "4" + "=";
+        document.cookie = "5" + "=";
+        document.cookie = "6" + "=";
+        document.cookie = "7" + "=";
+        document.cookie = "8" + "=";
+        document.cookie = "9" + "=";
+
+        document.getElementById("Empty1").style.background = "";
+        document.getElementById("Empty2").style.background = "";
+        document.getElementById("Empty3").style.background = "";
+        document.getElementById("Empty4").style.background = "";
+        document.getElementById("Empty5").style.background = "";
+        document.getElementById("Empty6").style.background = "";
+        document.getElementById("Empty7").style.background = "";
+        document.getElementById("Empty8").style.background = "";
+        document.getElementById("Empty9").style.background = "";
+        document.getElementById("Empty10").style.background = "";
+        document.getElementById("Empty11").style.background = "";
+        document.getElementById("Empty12").style.background = "";
+        document.getElementById("Empty13").style.background = "";
+        document.getElementById("Empty14").style.background = "";
+        document.getElementById("Empty15").style.background = "";
+        document.getElementById("Empty16").style.background = "";
+        document.getElementById("Empty17").style.background = "";
+        document.getElementById("Empty18").style.background = "";
+
+        document.getElementById("Empty1").value = "";
+        document.getElementById("Empty2").value = "";
+        document.getElementById("Empty3").value = "";
+        document.getElementById("Empty4").value = "";
+        document.getElementById("Empty5").value = "";
+        document.getElementById("Empty6").value = "";
+        document.getElementById("Empty7").value = "";
+        document.getElementById("Empty8").value = "";
+        document.getElementById("Empty9").value = "";
+        document.getElementById("Empty10").value = "";
+        document.getElementById("Empty11").value = "";
+        document.getElementById("Empty12").value = "";
+        document.getElementById("Empty13").value = "";
+        document.getElementById("Empty14").value = "";
+        document.getElementById("Empty15").value = "";
+        document.getElementById("Empty16").value = "";
+        document.getElementById("Empty17").value = "";
+        document.getElementById("Empty18").value = "";
+    }
 }
