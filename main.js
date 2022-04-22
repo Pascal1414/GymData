@@ -330,7 +330,7 @@ function Empty9_change() {
 }
 
 function deleteDataTable() {
-    Check = confirm("Möchten Sie die Daten wirklich löschen?");
+    Check = confirm("Möchten Sie die Daten aus der Tabelle wirklich löschen?");
     if (Check == true) {
         document.cookie = "1" + "=";
         document.cookie = "2" + "=";
