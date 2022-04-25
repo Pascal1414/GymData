@@ -5,18 +5,6 @@ window.onload = function() {
     loadDataOnLoad();
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
 function loadDataOnFocus() {
     document.getElementById("Beinpresse").value = getCookie("Beinpresse");
     document.getElementById("Beinbeuger").value = getCookie("Beinbeuger");
