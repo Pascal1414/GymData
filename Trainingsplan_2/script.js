@@ -15,6 +15,9 @@ function loadData() {
     document.getElementById("Trizeps").value = getCookie("Trizeps");
     document.getElementById("Rudern").value = getCookie("Rudern");
     document.getElementById("Klimmzüge").value = getCookie("Klimmzuege");
+
+
+    document.querySelector('.Bauch').checked = getCookie("Bauch");
 }
 
 function deleteData() {
@@ -29,6 +32,8 @@ function deleteData() {
         document.getElementById("Trizeps").value = "";
         document.getElementById("Rudern").value = "";
         document.getElementById("Klimmzüge").value = "";
+        document.getElementById("Bauch").value = "";
+
 
         Beinstrecker_change();
         Waden_change();
@@ -39,6 +44,7 @@ function deleteData() {
         Trizeps_change();
         Rudern_change();
         Klimmzüge_change();
+        Bauch_change();
     }
 }
 
@@ -75,6 +81,10 @@ function Waden_change() {
 
 function Squads_change() {
     document.cookie = "Squads=" + document.getElementById("Squads").value + ";" + getexpiresdate(7);
+}
+
+function Bauch_change() {
+    document.cookie = "Bauch=" + document.querySelector('.Bauch').checked + ";" + getexpiresdate(7);
 }
 
 function Brustpresse_change() {
