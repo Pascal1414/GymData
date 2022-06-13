@@ -10,6 +10,8 @@ body {}
 
 .element-input {
     width: 100%;
+    font-size: large;
+    height: 30px;
 }
 
 .element-checkbox {}
