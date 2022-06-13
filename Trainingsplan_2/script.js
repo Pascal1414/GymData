@@ -16,8 +16,11 @@ function loadData() {
     document.getElementById("Rudern").value = getCookie("Rudern");
     document.getElementById("Klimmzüge").value = getCookie("Klimmzuege");
 
-
-    document.querySelector('.Bauch').checked = getCookie("Bauch");
+    if (getCookie("Bauch") == "true") {
+        document.querySelector('.Bauch').checked = true;
+    } else {
+        document.querySelector('.Bauch').checked = false;
+    }
 }
 
 function deleteData() {
