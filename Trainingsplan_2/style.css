@@ -1,0 +1,15 @@
+body {}
+
+.element-container {}
+
+.element-text {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: large;
+}
+
+.element-input {
+    width: 100%;
+}
+
+.element-checkbox {}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>GymWebseite</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="main.js"></script>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="m-3">
+        <div>
+            <h3>Gym Daten</h3>
+        </div>
+        <div>
+            <div>
+                <p>Beinpresse</p>
+                <input id="Beinpresse" placeholder="Beinpresse" inputMode="text" type="text" oninput="Beinpresse_change()">
+                <br>
+            </div>
+            <br>
+            <div class="bg-light">
+                <p>Beinbeuger</p>
+                <input id="Beinbeuger" placeholder="Beinbeuger" inputMode="text" type="text" oninput="Beinbeuger_change()">
+                <br>
+            </div>
+            <br>
+            <div>
+                <p>Waden</p>
+                <input id="Waden" placeholder="Waden" inputMode="text" type="text" oninput="Waden_change()">
+                <br>
+            </div>
+            <br>
+            <div class="bg-light">
+                <p>Rückenstrecker</p>
+                <input id="Rückenstrecker" placeholder="Rückenstrecker" inputMode="text" type="text" oninput="Rückenstrecker_change()">
+                <br>
+            </div>
+            <br>
+            <div>
+                <p>Rudern</p>
+                <input id="Rudern" placeholder="Rudern" inputMode="text" type="text" oninput="Rudern_change()">
+                <br>
+            </div>
+            <br>
+            <div class="bg-light">
+                <p>Latzug</p>
+                <input id="Latzug" placeholder="Latzug" inputMode="text" type="text" oninput="Latzug_change()">
+                <br>
+            </div>
+            <br>
+            <div>
+                <p>Brust KH</p>
+                <input id="Brust_KH" placeholder="Brust KH" inputMode="text" type="text" oninput="Brust_KH_change()">
+                <br>
+            </div>
+            <br>
+            <div class="bg-light">
+                <p>Brustpresse</p>
+                <input id="Brustpresse" placeholder="Brustpresse" inputMode="text" type="text" oninput="Brustpresse_change()">
+                <br>
+            </div>
+            <br>
+            <div>
+                <p>Schulterpresse</p>
+                <input id="Schulterpresse" placeholder="Schulterpresse" inputMode="text" type="text" oninput="Schulterpresse_change()">
+                <br>
+            </div>
+            <br>
+            <div class="bg-light">
+                <p>Bizeps</p>
+                <input id="Bizeps" placeholder="Bizeps" inputMode="text" type="text" oninput="Bizeps_change()">
+                <br>
+            </div>
+            <br>
+            <div>
+                <p>Trizeps</p>
+                <input id="Trizeps" placeholder="Trizeps" inputMode="text" type="text" oninput="Trizeps_change()">
+                <br>
+            </div>
+            <br>
+            <div>
+                <br>
+
+                <button class="btn btn-primary" onclick="deleteData()">Alles löschen</button>
+            </div>
+
+
+        </div>
+        <div>
+            <br>
+            <br>
+
+            <h4>Infos</h4>
+            <p>Die Angaben werden automatisch für 7 Tage in den Cookies gespeichert. So bleiben sie bestehen, auch wenn die Seite geschlossen wurde.
+            </p>
+
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div class="m-3">
+        <h4>Andere Input Types:</h4>
+        <div>
+            <p>Text</p>
+            <input inputMode="text" type="text">
+        </div>
+        <br>
+        <div>
+            <p>Numeric</p>
+            <input inputMode="numeric" type="text">
+        </div>
+        <br>
+        <div>
+            <p>Decimal</p>
+            <input inputMode="decimal" type="text">
+        </div>
+        <br>
+        <div>
+            <p>Tel</p>
+            <input inputMode="tel" type="text">
+        </div>
+    </div>
+
+
+    <div>
+        <div>
+            <table>
+                <tr>
+                    <th>
+                        <input class="form-control" id="Empty1" inputMode="text" type="text" onchange="Empty1_change()">
+                    </th>
+                    <th>
+                        <input class="form-control" id="Empty2" inputMode="text" type="text" onchange="Empty1_change()">
+                    </th>
+                    <th>
+                        <button class="btn btn-primary" onclick="save1()">Sichern</button>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input class="form-control" id="Empty3" inputMode="text" type="text" onchange="Empty2_change()">
+                    </th>
+                    <th>
+                        <input class="form-control" id="Empty4" inputMode="text" type="text" onchange="Empty2_change()">
+                    </th>
+                    <th>
+                        <button class="btn btn-primary" onclick="save2()">Sichern</button>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input class="form-control" id="Empty5" inputMode="text" type="text" onchange="Empty3_change()">
+                    </th>
+                    <th>
+                        <input class="form-control" id="Empty6" inputMode="text" type="text" onchange="Empty3_change()">
+                    </th>
+                    <th>
+                        <button class="btn btn-primary" onclick="save3()">Sichern</button>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input class="form-control" id="Empty7" inputMode="text" type="text" onchange="Empty4_change()">
+                    </th>
+                    <th>
+                        <input class="form-control" id="Empty8" inputMode="text" type="text" onchange="Empty4_change()">
+                    </th>
+                    <th>
+                        <button class="btn btn-primary" onclick="save4()">Sichern</button>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input class="form-control" id="Empty9" inputMode="text" type="text" onchange="Empty5_change()">
+                    </th>
+                    <th>
+                        <input class="form-control" id="Empty10" inputMode="text" type="text" onchange="Empty5_change()">
+                    </th>
+                    <th>
+                        <button class="btn btn-primary" onclick="save5()">Sichern</button>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input class="form-control" id="Empty11" inputMode="text" type="text" onchange="Empty6_change()">
+                    </th>
+                    <th>
+                        <input class="form-control" id="Empty12" inputMode="text" type="text" onchange="Empty6_change()">
+                    </th>
+                    <th>
+                        <button class="btn btn-primary" onclick="save6()">Sichern</button>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input class="form-control" id="Empty13" inputMode="text" type="text" onchange="Empty7_change()">
+                    </th>
+                    <th>
+                        <input class="form-control" id="Empty14" inputMode="text" type="text" onchange="Empty7_change()">
+                    </th>
+                    <th>
+                        <button class="btn btn-primary" onclick="save7()">Sichern</button>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input class="form-control" id="Empty15" inputMode="text" type="text" onchange="Empty8_change()">
+                    </th>
+                    <th>
+                        <input class="form-control" id="Empty16" inputMode="text" type="text" onchange="Empty8_change()">
+                    </th>
+                    <th>
+                        <button class="btn btn-primary" onclick="save8()">Sichern</button>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input class="form-control" id="Empty17" inputMode="text" type="text" onchange="Empty9_change()">
+                    </th>
+                    <th>
+                        <input class="form-control" id="Empty18" inputMode="text" type="text" onchange="Empty9_change()">
+                    </th>
+                    <th>
+                        <button class="btn btn-primary" onclick="save9()">Sichern</button>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div class="m-3">
+            <br>
+            <button class="btn btn-primary" onclick="deleteDataTable()">Alles löschen</button>
+            <br>
+            <br>
+        </div>
+        <div class="m-3">
+            <br>
+            <br>
+
+            <h4>Infos</h4>
+            <p>Die Angaben werden automatisch für 2 Tage in den Cookies gespeichert. So bleiben sie bestehen, auch wenn die Seite geschlossen wurde.
+            </p>
+
+            <br>
+            <br>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
