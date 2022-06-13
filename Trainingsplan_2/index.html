@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trainingsplan 2</title>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -15,59 +16,62 @@
             <p class="element-text">
                 Beinstrecker
             </p>
-            <input class="element-input">
+            <input id="Beinstrecker" class="element-input" oninput="Beinstrecker_change()">
         </div>
         <div class="element-container">
             <p class="element-text">
                 Waden
             </p>
-            <input class="element-input">
+            <input id="Waden" class="element-input" oninput="Waden_change()">
         </div>
         <div class="element-container">
             <p class="element-text">
                 Squads
             </p>
-            <input class="element-input">
+            <input id="Squads" class="element-input" oninput="Squads_change()">
         </div>
         <div class="element-container">
             <p class="element-text">Bauch</p>
-            <input class="element-checkbox" type="checkbox">
+            <input class="element-checkbox" type="checkbox" oninput="_change()">
         </div>
         <div class="element-container">
             <p class="element-text">
                 Brustpresse
             </p>
-            <input class="element-input">
+            <input id="Brustpresse" class="element-input" oninput="Brustpresse_change()">
         </div>
         <div class="element-container">
             <p class="element-text">
                 Schulter
             </p>
-            <input class="element-input">
+            <input id="Schulter" class="element-input" oninput="Schulter_change()">
         </div>
         <div class="element-container">
             <p class="element-text">
                 Bizeps (Kabelzug)
             </p>
-            <input class="element-input">
+            <input id="Bizeps" class="element-input" oninput="Bizeps_change()">
         </div>
         <div class="element-container">
             <p class="element-text">
                 Trizeps (Kabelzug)
             </p>
-            <input class="element-input">
+            <input id="Trizeps" class="element-input" oninput="Trizeps_change()">
         </div>
         <div class="element-container">
             <p class="element-text">
                 Rudern
             </p>
-            <input class="element-input">
+            <input id="Rudern" class="element-input" oninput="Rudern_change()">
         </div>
         <div class="element-container">
             <p class="element-text">
                 Klimmzüge
             </p>
-            <input class="element-input">
+            <input id="Klimmzüge" class="element-input" oninput="Klimmzüge_change()">
+        </div>
+        <div>
+            <button class="btn-delete" onclick="deleteData()">Alles löschen</button>
         </div>
     </main>
 </body>
